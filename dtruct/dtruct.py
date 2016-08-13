@@ -9,6 +9,7 @@ email: peppy0510@hotmail.com
 
 import json
 import zlib
+import copy
 import base64
 
 
@@ -110,6 +111,8 @@ class dtruct(object):
                                        for v in data[key]])
                 setattr(result, key, data[key])
             return result
+
+        data = copy.deepcopy(data)
 
         for key in data.keys():
             if recursive and isinstance(data[key], dict):
