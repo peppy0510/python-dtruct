@@ -62,6 +62,10 @@ data.get_dict()
 >>> {'h': (1, 2, 3), 'b': 3, 'a': (1, 2, 3), 'c': {'d': '4', 'e': ({'f': {'g': 5}},)}}
 ```
 
+```python
+data.set_dict({'a': 1}, recursive=False, eepcopy=True)
+```
+
 ## Repository
 
 ```bash

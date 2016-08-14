@@ -72,7 +72,7 @@ class dtruct(object):
 
         return struct_to_dict(self, recursive)
 
-    def set_dict(self, data, recursive=True):
+    def set_dict(self, data, recursive=True, deepcopy=False):
         '''
         dict to dtruct.
         ex) x.set_dict({'a': 1, 'b': {'c': 2}})
@@ -112,7 +112,8 @@ class dtruct(object):
                 setattr(result, key, data[key])
             return result
 
-        data = copy.deepcopy(data)
+        if deepcopy:
+            data = copy.deepcopy(data)
 
         for key in data.keys():
             if recursive and isinstance(data[key], dict):
