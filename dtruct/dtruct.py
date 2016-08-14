@@ -119,18 +119,19 @@ class dtruct(object):
                 data[key] = dict_to_struct(data[key], recursive=recursive)
             setattr(self, key, data[key])
 
-    def get_json(self, sort_keys=True, indent=4):
-        return json.dumps(self.get_dict(), sort_keys=sort_keys, indent=indent)
+    def get_json(self, sort_keys=True, indent=4, ensure_ascii=True):
+        return json.dumps(self.get_dict(), sort_keys=sort_keys,
+                          indent=indent, ensure_ascii=ensure_ascii)
 
     def set_json(self, data):
         self.set_dict(json.loads(data))
 
-    def get_compressed(self, sort_keys=True, level=9):
+    def get_compressed(self, sort_keys=True, indent=4, ensure_ascii=True, level=9):
         data = base64.b64encode(
             zlib.compress(
                 json.dumps(
-                    self.get_dict(),
-                    sort_keys=sort_keys
+                    self.get_dict(), sort_keys=sort_keys,
+                    indent=indent, ensure_ascii=ensure_ascii
                 ).encode('utf-8'), level
             )
         )

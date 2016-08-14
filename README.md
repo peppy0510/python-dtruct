@@ -45,7 +45,7 @@ data.c.e[0].f.g
 
 ```python
 data.c.e[0].set_json('{"j": 5}')
-data.c.e[0].get_json(sort_keys=True, indent=4)
+data.c.e[0].get_json(sort_keys=True, indent=4, ensure_ascii=True)
 >>> {
         "f": {
             "g": 5

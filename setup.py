@@ -15,7 +15,7 @@ except ImportError:
 
 setup(
     name='dtruct',
-    version='0.1.2',
+    version='0.1.3',
     packages=['dtruct'],
     author='Taehong Kim',
     author_email='peppy0510@hotmail.com',
