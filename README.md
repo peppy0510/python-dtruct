@@ -63,7 +63,7 @@ data.get_dict()
 ```
 
 ```python
-data.set_dict({'a': 1}, recursive=False, eepcopy=True)
+data.set_dict({'a': 1}, recursive=False, deepcopy=True)
 ```
 
 ## Repository
