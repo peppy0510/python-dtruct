@@ -2,7 +2,7 @@
 ## Installation
 
 ```bash
-pip install git+http://muteklab.com:9000/root/python-dtruct.git
+pip install git+http://east-control.com:9000/pockestra/python-dtruct.git
 ```
 
 ```bash
@@ -69,5 +69,5 @@ data.set_dict({'a': 1}, recursive=False, deepcopy=True)
 ## Repository
 
 ```bash
-git clone http://muteklab.com:9000/root/python-dtruct.git
+git clone http://east-control.com:9000/pockestra/python-dtruct.git
 ```
