@@ -2,7 +2,7 @@
 ## Installation
 
 ```bash
-pip install git+http://east-control.com:3000/pockestra/python-dtruct.git
+pip install git+http://git@github.com/peppy0510/python-dtruct.git
 ```
 
 ```bash
@@ -69,5 +69,5 @@ data.set_dict({'a': 1}, recursive=False, deepcopy=True)
 ## Repository
 
 ```bash
-git clone http://east-control.com:9000/pockestra/python-dtruct.git
+git clone git@github.com:peppy0510/python-dtruct.git
 ```
